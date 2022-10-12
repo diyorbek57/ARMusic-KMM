@@ -35,6 +35,8 @@ dependencies {
     val nav_version = "2.5.2"
     val lifecycler_version = "2.5.1"
     val exo_player_version = "2.18.1"
+    //coil
+    implementation("io.coil-kt:coil-compose:2.0.0-rc01")
     //exo player
     implementation("com.google.android.exoplayer:exoplayer:$exo_player_version")
     implementation("com.google.android.exoplayer:exoplayer-core:$exo_player_version")
