@@ -42,26 +42,26 @@ class MainActivity : ComponentActivity() {
                                 BottomNavItem(
                                     name = "Home",
                                     route = "home",
-                                    default_icon = ImageVector.vectorResource(id = CustomIcons.HomeLine),
-                                    selected_icon = ImageVector.vectorResource(id = CustomIcons.HomeBold)
+                                    default_icon = ImageVector.vectorResource(id = HomeLine),
+                                    selected_icon = ImageVector.vectorResource(id = HomeBold)
                                 ),
                                 BottomNavItem(
                                     name = "Favorites",
                                     route = "favorites",
-                                    default_icon = ImageVector.vectorResource(id = CustomIcons.HeartLine),
-                                    selected_icon = ImageVector.vectorResource(id = CustomIcons.HeartBold)
+                                    default_icon = ImageVector.vectorResource(id = HeartLine),
+                                    selected_icon = ImageVector.vectorResource(id = HeartBold)
                                 ),
                                 BottomNavItem(
                                     name = "Playlist",
                                     route = "playlist",
-                                    default_icon = ImageVector.vectorResource(id = CustomIcons.ClipBoardLine),
-                                    selected_icon = ImageVector.vectorResource(id = CustomIcons.ClipBoardBold)
+                                    default_icon = ImageVector.vectorResource(id = ClipBoardLine),
+                                    selected_icon = ImageVector.vectorResource(id = ClipBoardBold)
                                 ),
                                 BottomNavItem(
                                     name = "Settings",
                                     route = "settings",
-                                    default_icon = ImageVector.vectorResource(id = CustomIcons.SettingLine),
-                                    selected_icon = ImageVector.vectorResource(id = CustomIcons.SettingBold)
+                                    default_icon = ImageVector.vectorResource(id = SettingLine),
+                                    selected_icon = ImageVector.vectorResource(id = SettingBold)
                                 ),
                             ),
                             navController = navController,

@@ -36,7 +36,8 @@ dependencies {
     val lifecycler_version = "2.5.1"
     val exo_player_version = "2.18.1"
     //coil
-    implementation("io.coil-kt:coil-compose:2.0.0-rc01")
+    implementation ("com.github.skydoves:landscapist-coil:2.0.1")
+    implementation("io.coil-kt:coil-compose:2.2.2")
     //exo player
     implementation("com.google.android.exoplayer:exoplayer:$exo_player_version")
     implementation("com.google.android.exoplayer:exoplayer-core:$exo_player_version")

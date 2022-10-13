@@ -1,6 +1,5 @@
 package uz.ayizor.armusic.android.ui.items
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
@@ -12,7 +11,8 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import coil.compose.rememberAsyncImagePainter
+import com.skydoves.landscapist.ImageOptions
+import com.skydoves.landscapist.coil.CoilImage
 
 @Composable
 fun VerticalTrackItem(imageUrl: String, trackName: String, artistName: String) {
@@ -24,13 +24,15 @@ fun VerticalTrackItem(imageUrl: String, trackName: String, artistName: String) {
             .wrapContentHeight(Alignment.CenterVertically)
             .padding(10.dp)
     ) {
-        Image(
-            painter = rememberAsyncImagePainter(imageUrl),
-            contentDescription = "Round corner image",
-            contentScale = ContentScale.Crop,
-            modifier = Modifier
-                .size(120.dp)
-                .clip(RoundedCornerShape(15))
+
+
+        CoilImage(
+            imageModel = { imageUrl }, // loading a network image or local resource using an URL.
+            imageOptions = ImageOptions(
+                contentScale = ContentScale.Crop,
+                alignment = Alignment.Center
+            ), modifier = Modifier.size(120.dp).clip(shape = RoundedCornerShape(15.dp))
+
         )
         Box(
             modifier = Modifier
@@ -38,6 +40,7 @@ fun VerticalTrackItem(imageUrl: String, trackName: String, artistName: String) {
                 .widthIn(0.dp, 120.dp),
             contentAlignment = Alignment.BottomStart
         ) {
+
             Text(
                 text = "$trackName - $artistName",
                 maxLines = 2,
@@ -52,5 +55,4 @@ fun VerticalTrackItem(imageUrl: String, trackName: String, artistName: String) {
 @Preview(name = "Item words")
 @Composable
 fun VerticalTrackItemPreview() {
-    VerticalTrackItem("https://picfiles.alphacoders.com/277/277349.jpg","Track Name","Artist Name")
 }
